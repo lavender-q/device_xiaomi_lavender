@@ -31,10 +31,10 @@ PRODUCT_MODEL := Redmi Note 7
 PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_DEVICE="lavender" \
-    PRODUCT_NAME="lavender" \
-    PRIVATE_BUILD_DESC="redfin-user 12 SP2A.220305.012 8177914 release-keys"
-
-BUILD_FINGERPRINT := google/redfin/redfin:12/SP2A.220305.012/8177914:user/release-keys
+    PRODUCT_DEVICE=lavender \
+    PRODUCT_NAME=lavender
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+
+

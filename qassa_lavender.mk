@@ -25,7 +25,7 @@ NAD_BUILD_TYPE := EBL
 USE_PIXEL_CHARGING := true
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := qassa_lavender
+PRODUCT_NAME := nad_lavender
 PRODUCT_DEVICE := lavender
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 7

@@ -13,12 +13,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 $(call inherit-product, device/xiaomi/lavender/device.mk)
 
 # Inherit some common Nusantara stuff.
-$(call inherit-product, vendor/qassa/config/common_full_phone.mk)
+$(call inherit-product, vendor/nusantara/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 #TARGET_GAPPS_ARCH := arm64
 #TARGET_INCLUDE_STOCK_ARCORE := true
 #WITH_GAPPS :=true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
+NAD_BUILD_TYPE := EBL
 
 # Charging Animation
 USE_PIXEL_CHARGING := true

@@ -21,6 +21,7 @@ TARGET_SCREEN_WIDTH := 1080
 DEVICE_PACKAGE_OVERLAYS := \
     $(LOCAL_PATH)/overlay
 
+# RRO configuration
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # AR config

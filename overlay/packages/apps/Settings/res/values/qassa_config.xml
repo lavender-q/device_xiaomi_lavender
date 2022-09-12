@@ -31,5 +31,8 @@
     <bool name="config_supportBatteryHealth">true</bool>
     
     <!-- Nusantara maintainer -->
-    <string name="maintainer_name"> MRMDprjkt° </string>    
+    <string name="maintainer_name">MRMDprjkt°</string>
+    <!-- Overlay for maintener -->
+    <string name="github_username">Merma1dmanPrjct</string> 
+    <string name="telegram_username">MRMDprjkt° Support</string>
 </resources>

@@ -111,6 +111,7 @@ on boot
 
 #Load WLAN driver
    insmod /vendor/lib/modules/qca_cld3_wlan.ko
+   chown wifi wifi /sys/module/wlan/parameters/fwpath
 
 #USB controller configuration
     setprop vendor.usb.rndis.func.name "rndis_bam"
@@ -265,6 +266,8 @@ on charger
     setprop sys.usb.configfs 1
     start power_off_alarm
     start vendor.thermal-engine
+    chown system system /sys/class/leds/red/brightness
+    write /sys/class/leds/red/brightness 255
 
 service vendor.hvdcp_opti /system/vendor/bin/hvdcp_opti
      class main

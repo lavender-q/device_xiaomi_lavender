@@ -16,11 +16,10 @@ $(call inherit-product, device/xiaomi/lavender/device.mk)
 $(call inherit-product, vendor/nusantara/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_GAPPS_ARCH := arm64
-#TARGET_INCLUDE_STOCK_ARCORE := true
+TARGET_INCLUDE_STOCK_ARCORE := true
 USE_GAPPS := true
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-NAD_BUILD_TYPE := BETA-1
-TARGET_SUPPORTS_QUICK_TAP := true
+#TARGET_SUPPORTS_GOOGLE_RECORDER := true
+#TARGET_SUPPORTS_QUICK_TAP := true
 
 # Charging Animation
 USE_PIXEL_CHARGING := true
@@ -38,4 +37,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="lavender" \
     PRIVATE_BUILD_DESC="lavender-user 10 QKQ1.190910.002 V12.5.3.0.QFGMIXM release-keys"
 
-BUILD_FINGERPRINT :="google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys"
+BUILD_FINGERPRINT :="xiaomi/lavender/lavender:10/QKQ1.190910.002/V12.5.3.0.QFGMIXM:user/release-keys"

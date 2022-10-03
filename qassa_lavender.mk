@@ -12,8 +12,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 # Inherit from lavender device
 $(call inherit-product, device/xiaomi/lavender/device.mk)
 
-# Inherit some common Nusantara stuff.
-$(call inherit-product, vendor/qassa/config/common_full_phone.mk)
+# Inherit some common Havoc OS stuff.
+$(call inherit-product, vendor/havoc/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 #TARGET_GAPPS_ARCH := arm64
 #TARGET_INCLUDE_STOCK_ARCORE := true
@@ -24,15 +24,18 @@ TARGET_SUPPORTS_GOOGLE_RECORDER := true
 USE_PIXEL_CHARGING := true
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := qassa_lavender
+PRODUCT_NAME := havoc_lavender
 PRODUCT_DEVICE := lavender
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 7
 PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_DEVICE=lavender \
-    PRODUCT_NAME=lavender
+    PRODUCT_DEVICE="lavender" \
+    PRODUCT_NAME="lavender" \
+    PRIVATE_BUILD_DESC="lavender-user 10 QKQ1.190910.002 V12.5.3.0.QFGMIXM release-keys"
+
+BUILD_FINGERPRINT :="xiaomi/lavender/lavender:10/QKQ1.190910.002/V12.5.3.0.QFGMIXM:user/release-keys"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 

@@ -8,6 +8,6 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/qassa_lavender.mk
 
 COMMON_LUNCH_CHOICES := \
-    qassa_lavender-user \
-    qassa_lavender-userdebug \
-    qassa_lavender-eng
+    havoc_lavender-user \
+    havoc_lavender-userdebug \
+    havoc_lavender-eng

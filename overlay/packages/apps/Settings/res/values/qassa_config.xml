@@ -30,6 +30,6 @@
     <string name="config_batCurCap">/sys/class/power_supply/bms/charge_full</string>
     <bool name="config_supportBatteryHealth">true</bool>
     
-    <!-- Nusantara maintainer -->
-    <string name="maintainer_name"> MRMDprjkt° </string>    
+    <!-- Qassa maintainer -->
+    <string name="maintainer_name">MRMDprjkt°</string>    
 </resources>

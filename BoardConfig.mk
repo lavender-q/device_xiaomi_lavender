@@ -68,11 +68,7 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/xiaomi/lavender
 TARGET_KERNEL_CONFIG := lavender-perf_defconfig
-TARGET_KERNEL_NEW_GCC_COMPILE := true
-KERNEL_TOOLCHAIN_arm64 := $(PWD)/prebuilts/gcc/linux-x86/aarch64/aarch64-elf/bin
-KERNEL_TOOLCHAIN_PREFIX_arm64 := aarch64-elf-
-KERNEL_TOOLCHAIN_arm := $(PWD)/prebuilts/gcc/linux-x86/arm/arm-eabi/bin
-KERNEL_TOOLCHAIN_PREFIX_arm := arm-eabi-
+TARGET_KERNEL_CLANG_COMPILE := true
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"

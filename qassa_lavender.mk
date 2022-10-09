@@ -16,6 +16,7 @@ $(call inherit-product, device/xiaomi/lavender/device.mk)
 $(call inherit-product, vendor/qassa/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 QASSA_VERSION_NUMBER := v2.1
+QASSA_VERSION_PROP := Q
 #TARGET_GAPPS_ARCH := arm64
 #TARGET_INCLUDE_STOCK_ARCORE := true
 #WITH_GAPPS :=true

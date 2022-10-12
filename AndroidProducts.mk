@@ -1,13 +1,14 @@
 #
 # Copyright (C) 2019 The LineageOS Project
+# Copyright (C) 2022 MDROID
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/nad_lavender.mk
+    $(LOCAL_DIR)/mdroid_lavender.mk
 
 COMMON_LUNCH_CHOICES := \
-    nad_lavender-user \
-    nad_lavender-userdebug \
-    nad_lavender-eng
+    mdroid_lavender-user \
+    mdroid_lavender-userdebug \
+    mdroid_lavender-eng

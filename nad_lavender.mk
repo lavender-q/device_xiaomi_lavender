@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2022 The LineageOS Project
+# Copyright (C) 2022 By Merma1dmanPrjkt
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -12,20 +13,23 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 # Inherit from lavender device
 $(call inherit-product, device/xiaomi/lavender/device.mk)
 
-# Inherit some common Nusantara stuff.
-$(call inherit-product, vendor/nusantara/config/common_full_phone.mk)
-TARGET_BOOT_ANIMATION_RES := 1080
-#TARGET_GAPPS_ARCH := arm64
-#TARGET_INCLUDE_STOCK_ARCORE := true
-#WITH_GAPPS :=true
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-NAD_BUILD_TYPE := EBL
+# mdroidQERROR flags.
+$(call inherit-product, vendor/mdroid/config/common_full_phone.mk)
+MDROID_DEVICE := lavender
+MDROID_MAINTAINER := FBRIIIIIIIII
+MDROID_OFFICIAL := true
+MDROID_PACKAGE_TYPE := Vanilla
+TARGET_FACE_UNLOCK_SUPPORTED := true
 
-# Charging Animation
+# Pixel
+WITH_GMS := true
+TARGET_GAPPS_ARCH := arm64
 USE_PIXEL_CHARGING := true
+TARGET_INCLUDE_STOCK_ARCORE := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := false
 
-# Device identifier. This must come after all inclusions.
-PRODUCT_NAME := nad_lavender
+# Device identifier.
+PRODUCT_NAME := mdroid_lavender
 PRODUCT_DEVICE := lavender
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 7
@@ -34,10 +38,4 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_DEVICE="lavender" \
-    PRODUCT_NAME="lavender" \
-    PRIVATE_BUILD_DESC="lavender-user 10 QKQ1.190910.002 V12.5.3.0.QFGMIXM release-keys"
-
-BUILD_FINGERPRINT :="xiaomi/lavender/lavender:10/QKQ1.190910.002/V12.5.3.0.QFGMIXM:user/release-keys"
-
-
-
+    PRODUCT_NAME="lavender"

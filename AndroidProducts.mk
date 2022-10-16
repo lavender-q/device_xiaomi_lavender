@@ -5,7 +5,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/qassa_lavender.mk
+    $(LOCAL_DIR)/havoc_lavender.mk
 
 COMMON_LUNCH_CHOICES := \
     havoc_lavender-user \

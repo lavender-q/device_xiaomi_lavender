@@ -14,9 +14,9 @@ VENDOR=xiaomi
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
-ANDROID_ROOT="${MY_DIR}"/../../..
+QASSA_ROOT="${MY_DIR}"/../../..
 
-HELPER="${ANDROID_ROOT}/vendor/nusantara/build/tools/extract_utils.sh"
+HELPER="${QASSA_ROOT}/vendor/qassa/build/tools/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
     echo "Unable to find helper script at ${HELPER}"
     exit 1
@@ -48,7 +48,7 @@ if [ -z "${SRC}" ]; then
     SRC=adb
 fi
 
-BLOB_ROOT="$ANDROID_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary
+BLOB_ROOT="$QASSA_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary
 
 patchelf --remove-needed android.hidl.base@1.0.so "$BLOB_ROOT"/lib/libfm-hci.so
 patchelf --remove-needed android.hidl.base@1.0.so "$BLOB_ROOT"/lib64/libfm-hci.so

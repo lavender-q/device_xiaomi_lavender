@@ -45,7 +45,6 @@ BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
 
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 androidboot.console=ttyMSM0 earlycon=msm_serial_dm,0xc170000 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 service_locator.enable=1 swiotlb=1 loop.max_part=7
-BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_CMDLINE += kpti=off
 BOARD_KERNEL_BASE        := 0x00000000
 BOARD_KERNEL_PAGESIZE    := 4096
@@ -56,13 +55,13 @@ BOARD_DTBOIMG_PARTITION_SIZE := 8388608
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/xiaomi/lavender
 TARGET_KERNEL_CONFIG := lavender-perf_defconfig
-TARGET_KERNEL_NEW_GCC_COMPILE := true
-KERNEL_TOOLCHAIN_arm64 := $(PWD)/prebuilts/gcc/linux-x86/aarch64/aarch64-elf/bin
-KERNEL_TOOLCHAIN_PREFIX_arm64 := aarch64-elf-
-KERNEL_TOOLCHAIN_arm := $(PWD)/prebuilts/gcc/linux-x86/arm/arm-eabi/bin
-KERNEL_TOOLCHAIN_PREFIX_arm := arm-eabi-
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+  TARGET_KERNEL_CLANG_COMPILE := true
+  TARGET_KERNEL_CLANG_VERSION := proton
+  TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/proton-clang
+  TARGET_KERNEL_SOURCE := kernel/xiaomi/lavender
+endif
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
